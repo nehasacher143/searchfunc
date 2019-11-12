@@ -1,0 +1,52 @@
+<ion-header> </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title text-center>Search for a License</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-searchbar
+        placeholder="Enter License Number"
+        (ionChange)="onSearchChange($event)"
+        [debounce]="2000"
+      >
+      </ion-searchbar>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="selectedItems.licenseNumber !== undefined" class="details">
+    <!-- <ion-card-header>
+      <ion-card-title>License Number Details</ion-card-title>
+    </ion-card-header> -->
+
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          License Number: {{ selectedItems.licenseNumber }}
+          {{ errorMessage }}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col> Business Name: {{ selectedItems.businessName }} </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col> City: {{ selectedItems.cityCounty }} </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col> Status: {{ selectedItems.status }} </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col> Issue Date: {{ selectedItems.issueDate }} </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col> Expiration Date: {{ selectedItems.expirationDate }} </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

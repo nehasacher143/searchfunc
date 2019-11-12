@@ -1,0 +1,27 @@
+ion-searchbar {
+  --background: #57b4aa;
+  width: 50%;
+  margin: 0 auto;
+  --color: #ffffff;
+  --icon-color: #ffffff;
+  --placeholder-color: #ffffff;
+}
+
+ion-content {
+  --background: var(--ion-color-light);
+  ion-card {
+    --background: #ffffff;
+  }
+}
+
+.searchbar-search-icon.sc-ion-searchbar-md {
+  left: auto;
+  right: 16px;
+}
+
+ion-card.details {
+  --color: #57b4aa;
+  border: 2px solid #57b4aa;
+  width: 50%;
+  margin: 0 auto;
+}
